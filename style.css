@@ -1,0 +1,110 @@
+
+body{
+    background-image: url(assets/bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; 
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* ***********Home Page css  ******************/
+
+.container{
+    width: 97%;
+    height: 92%;
+    border: 2px solid #fff;
+    margin: 10px auto;
+    
+}
+.logo img{
+    margin: auto ;
+    display: block;
+    width: 25%;
+}
+.corner-left {
+    display: flex;
+    position: absolute;
+    top: 120px;
+    left: 10px;
+}
+.corner-right {
+    display: flex;
+    position: absolute;
+    top: 120px;
+    right: 10px;
+}
+
+.name{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.name h1{
+    color: #fff;
+    font-size: 100px;
+}
+.name span{
+    color: #dcb030;
+}
+.btn{
+    text-align: center;
+}
+.btn button{
+    background-color: #ddb130;
+    padding: 10px 60px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    border-color:#ddb130;
+}
+.btn button a{
+    text-decoration: none;
+    color: #10314c;
+}
+
+/* ************** Weather page css **************** */
+
+.main-container{
+    width: 80%;
+    height: 85vh;
+    backdrop-filter: blur(10px);
+    margin:20px auto;
+}
+
+/* Header  */
+header{
+    position: relative;
+}
+.city-input{
+    width: 90%;
+    padding: 10px 16px;
+    border-radius: 99px;
+    border: 2px solid transparent;
+    background: rgba(245, 241, 241, 0.107);
+    outline: none;
+    color: #fff;
+    padding-right: 45px;
+}
+.city-input:focus{
+    border: 3px solid rgb(0, 0, 0, 0.15);
+}
+.city-input::placeholder{
+    color: rgb(255, 255, 255, 0.75);
+    font-size: 16px;
+}
+.search-btn{
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+
