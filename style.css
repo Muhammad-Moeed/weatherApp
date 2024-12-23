@@ -15,7 +15,7 @@ body{
 .container{
     width: 97%;
     height: 92%;
-    border: 2px solid #fff;
+    border: 2px solid #ddb130;
     margin: 10px auto;
     
 }
@@ -72,6 +72,7 @@ body{
     height: 85vh;
     backdrop-filter: blur(10px);
     margin:20px auto;
+    color: #fff;
 }
 
 /* Header  */
@@ -107,4 +108,20 @@ header{
     color: #fff;
 }
 
+/*************** Weather Info **************/
+
+.weather-info{
+padding: 10px;
+font-size: 30px;
+}
+.location-date-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.location{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 
