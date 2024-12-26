@@ -12,6 +12,7 @@ const visibilityCheck = document.querySelector('.visibility');
 const windSpeed = document.querySelector('.windSpeed');
 const weatherIcon = document.querySelector('.weatherIcon');
 
+
 //Input validation
 
 button.onclick = async () => {
