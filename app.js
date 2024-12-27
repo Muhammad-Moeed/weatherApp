@@ -2,7 +2,7 @@ const button = document.getElementById('search');
 const inputElement = document.getElementById('input');
 const apiKey = '78361993f527c60d8284d9de41e26c3a';
 
-const cityName  = document.querySelector('.cityName');
+const cityName = document.querySelector('.cityName');
 const countryName = document.querySelector('.countryName');
 const temperature = document.querySelector('.temperature');
 const weatherType = document.querySelector('.weatherType');
@@ -16,7 +16,7 @@ const weatherIcon = document.querySelector('.weatherIcon');
 button.onclick = async () => {
     const city = inputElement.value.trim();
     if (city === '') {
-        Swal.fire('Oops...', 'Please Enter City Name!', 'error');  
+        Swal.fire('Oops...', 'Please Enter City Name!', 'error');
     } else {
         await fetchWeather(city);
         inputElement.value = '';
@@ -106,7 +106,7 @@ const getLocation = () => {
                 const { latitude, longitude } = position.coords;
                 await Coordinates(latitude, longitude);
             }
-        
+
         );
     } else {
         Swal.fire('Oops...', 'Geolocation is not supported by your browser!', 'error');

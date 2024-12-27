@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -8,133 +9,111 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style>
-        body {
-            background-image: url(./assets/bg4.gif);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 100vh;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            backdrop-filter: blur(8px);
-        }
+    <link rel="stylesheet" href="style.css">
 
-        .glass-container {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        }
-
-        .icon-animate {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-    </style>
 </head>
 
 <body class="text-white flex items-center justify-center min-h-screen bg-cover bg-center">
-    <div class="glass-container w-11/12 md:w-9/12 lg:w-7/12 h-[90%] p-8 rounded-3xl flex flex-col justify-between">
-        <!-- Header -->
-        <div class="flex items-center justify-between mb-6">
-            <h1 class="text-4xl font-bold text-yellow 
-           p-shadow-lg">
-                Weather Forecasts
+    <div
+        class="glass-container w-11/12 sm:w-9/12 lg:w-7/12 h-[90%] p-6 sm:p-8 rounded-3xl flex flex-col justify-between mt-4 mb-4 sm:mt-0 sm:mb-0">
+
+        <div class="flex flex-col sm:flex-row items-center justify-between mb-6 text-center sm:text-left">
+            <h1 class="text-3xl sm:text-4xl font-bold text-white-300 drop-shadow-lg mb-4 sm:mb-0">
+                Weather
+                <span class="text-yellow-300">
+                    ForeCasts
+                </span>
             </h1>
-            <i class="fas fa-cloud-sun text-4xl text-yellow-300 icon-animate"></i>
+            <i class="fas fa-cloud-sun text-4xl text-white icon-animate"></i>
         </div>
-        <!-- Input Section -->
+
         <div class="relative mb-6">
             <input id="input"
-                class="w-full p-4 pr-16 rounded-full bg-[#374151]/80 text-blue-100 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 shadow-lg"
+                class="w-full p-3 sm:p-4 pr-12 rounded-full bg-[#374151]/80 text-blue-100 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-500 shadow-lg"
                 placeholder="Enter city name" type="text" value="" />
-            <button id="search" class="absolute top-1/2 right-4 transform -translate-y-1/2 text-blue-300 hover:text-blue-400">
+            <button id="search"
+                class="absolute top-1/2 right-4 transform -translate-y-1/2 text-blue-300 hover:text-blue-400">
                 <span class="material-icons text-2xl">search</span>
             </button>
         </div>
-        <!-- Weather Info -->
-        <div class="flex items-center justify-between mb-6">
-            <div class="flex items-center">
+
+        <div class="flex flex-col sm:flex-row items-center justify-between mb-6 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row items-center">
                 <img alt="Weather icon showing current weather condition"
-                    class="weatherIcon w-20 h-20 icon-animate" src="assets/weather/clouds.svg" />
-                <div class="ml-4">
-                    <h2 class="cityName text-3xl font-bold text-blue-200 drop-shadow">
+                    class="weatherIcon w-16 sm:w-20 h-16 sm:h-20 icon-animate mx-auto sm:mx-0"
+                    src="assets/weather/clouds.svg" />
+                <div class="ml-0 sm:ml-4 mt-4 sm:mt-0">
+                    <h2 class="cityName text-2xl sm:text-3xl font-bold text-blue-200 drop-shadow">
                         City Name
                     </h2>
-                    <p class="countryName text-xl text-blue-300">
+                    <p class="countryName text-lg sm:text-xl text-blue-300">
                         Country
                     </p>
                 </div>
             </div>
-            <div class="text-right">
-                <h2 class="temperature text-6xl font-bold text-yellow-300 drop-shadow-lg">
-                0&deg;C
+            <div class="text-center sm:text-right mt-4 sm:mt-0">
+                <h2 class="temperature text-4xl sm:text-6xl font-bold text-yellow-300 drop-shadow-lg">
+                    0&deg;C
                 </h2>
-                <p class="weatherType text-2xl text-blue-300">
+                <p class="weatherType text-lg sm:text-2xl text-blue-300">
                     Clear Sky
                 </p>
             </div>
         </div>
-        <!-- Stats Section -->
-        <div class="grid grid-cols-2 gap-4">
-            <div class="flex items-center justify-between p-6 bg-[#1f2937]/80 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div
+                class="flex items-center justify-between p-4 sm:p-6 bg-[#1f2937]/80 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
                 <div>
-                    <p class="text-lg text-blue-200">
+                    <p class="text-base sm:text-lg text-blue-200">
                         Humidity
                     </p>
-                    <p class="humidity text-2xl font-bold text-blue-300">
-                    0%
+                    <p class="humidity text-xl sm:text-2xl font-bold text-blue-300">
+                        0%
                     </p>
                 </div>
-                <i class="fas fa-tint text-4xl text-blue-300"></i>
+                <i class="fas fa-tint text-3xl sm:text-4xl text-blue-300"></i>
             </div>
-            <div class="flex items-center justify-between p-6 bg-[#1f2937]/80 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
+            <div
+                class="flex items-center justify-between p-4 sm:p-6 bg-[#1f2937]/80 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
                 <div>
-                    <p class="text-lg text-blue-200">
+                    <p class="text-base sm:text-lg text-blue-200">
                         Wind Speed
                     </p>
-                    <p class="windSpeed text-2xl font-bold text-blue-300">
-                       0 m/s
+                    <p class="windSpeed text-xl sm:text-2xl font-bold text-blue-300">
+                        0 m/s
                     </p>
                 </div>
-                <i class="fas fa-wind text-4xl text-blue-300"></i>
+                <i class="fas fa-wind text-3xl sm:text-4xl text-blue-300"></i>
             </div>
-            <div class="flex items-center justify-between p-6 bg-[#1f2937]/80 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
+            <div
+                class="flex items-center justify-between p-4 sm:p-6 bg-[#1f2937]/80 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
                 <div>
-                    <p class="text-lg text-blue-200">
+                    <p class="text-base sm:text-lg text-blue-200">
                         Pressure
                     </p>
-                    <p class="pressure text-2xl font-bold text-blue-300">
+                    <p class="pressure text-xl sm:text-2xl font-bold text-blue-300">
                         0 hPa
                     </p>
                 </div>
-                <i class="fas fa-tachometer-alt text-4xl text-blue-300"></i>
+                <i class="fas fa-tachometer-alt text-3xl sm:text-4xl text-blue-300"></i>
             </div>
-            <div class="flex items-center justify-between p-6 bg-[#1f2937]/80 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
+            <div
+                class="flex items-center justify-between p-4 sm:p-6 bg-[#1f2937]/80 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
                 <div>
-                    <p class="text-lg text-blue-200">
+                    <p class="text-base sm:text-lg text-blue-200">
                         Visibility
                     </p>
-                    <p class="visibility text-2xl font-bold text-blue-300">
+                    <p class="visibility text-xl sm:text-2xl font-bold text-blue-300">
                         0 km
                     </p>
                 </div>
-                <i class="fas fa-eye text-4xl text-blue-300"></i>
+                <i class="fas fa-eye text-3xl sm:text-4xl text-blue-300"></i>
             </div>
         </div>
     </div>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>

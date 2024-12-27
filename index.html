@@ -5,38 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather ForeCasts</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-cover bg-center h-screen overflow-hidden m-0 p-0 font-['Roboto']" style="background-image: url(assets/bg4.gif)">
-    <div class="w-[97%] h-[92%] border-2 border-white mx-auto my-[10px]">
-        <!-- Logo Section -->
-        <div class="flex justify-center">
-            <img src="assets/badal.png" alt="" class="w-[25%]">
-        </div>
-        <!-- Corner Clouds Left -->
-        <div class="absolute flex top-[120px] left-[10px]">
-            <img src="assets/badal.png" alt="" class="w-auto">
-            <img src="assets/badal.png" alt="" class="w-auto">
-        </div>
-        <!-- Corner Clouds Right -->
-        <div class="absolute flex top-[120px] right-[10px]">
-            <img src="assets/badal.png" alt="" class="w-auto">
-            <img src="assets/badal.png" alt="" class="w-auto">
-        </div>
-        <!-- Name Section -->
-        <div class=" text-center font-['Franklin_Gothic_Medium']">
-            <h1 class="text-white text-[100px] mt-6">
-                Weather <span class="text-[#dcb030]">ForeCasts</span>
-            </h1>
-        </div>
-        <!-- Button Section -->
-        <div class="text-center mt-6">
-            <a href="./weather.html">
-                <button class="bg-[#ddb130] px-[60px] py-[10px] text-[20px] font-bold rounded-full cursor-pointer border-[#ddb130] text-[#10314c]">
-                    Get Start
-                </button>
-            </a>
+<body class="bg-cover bg-center min-h-screen overflow-hidden m-0 p-0 font-['Roboto']"
+    style="background-image: url(assets/bg4.gif)">
+    <div class="absolute inset-0 p-4 sm:p-6">
+        <div class="w-full h-full border-2 border-white blur-border rounded-lg">
+
+            <div class="flex justify-center mt-8 sm:mt-10">
+                <img src="assets/badal.png" alt="Central Cloud" class="w-[60%] sm:w-[25%]">
+            </div>
+
+            <div class="hidden sm:flex absolute top-[150px] left-[20px] space-x-2">
+                <img src="assets/badal.png" alt="" class="w-auto">
+                <img src="assets/badal.png" alt="" class="w-auto">
+            </div>
+            <div class="hidden sm:flex absolute top-[150px] right-[20px] space-x-2">
+                <img src="assets/badal.png" alt="" class="w-auto">
+                <img src="assets/badal.png" alt="" class="w-auto">
+            </div>
+
+            <div class="text-center font-['Franklin_Gothic_Medium']">
+                <h1 class="text-white text-[50px] sm:text-[100px] mt-6">
+                    Weather <span class="text-[#dcb030]">ForeCasts</span>
+                </h1>
+            </div>
+
+            <div class="text-center mt-6">
+                <a href="./weather.html">
+                    <button
+                        class="relative bg-[#ddb130] px-[40px] py-[10px] sm:px-[60px] sm:py-[10px] text-[16px] sm:text-[20px] font-bold rounded-full border-2 border-[#ddb130] text-[#10314c] cursor-pointer overflow-hidden group">
+                        <span
+                            class="absolute inset-0 bg-[#f2cc60] rounded-full transform scale-0 transition-transform duration-300 group-hover:scale-110"></span>
+                        <span class="relative z-10">Get Started</span>
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
     <script src="app.js"></script>
